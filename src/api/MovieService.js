@@ -6,5 +6,15 @@ const url = 'https://api.themoviedb.org/3/'
 const withBaseUrl = (path) => `${url}${path}?api_key=${key}`;
 
 export class MovieService {
+    static getMovies() {
+        return axios(withBaseUrl('movie/popular'));
+    }
 
+    static getMovieDetails(id) {
+        return axios(withBaseUrl(`movie/${id}`));
+    }
+
+    static searchMovies(movie) {
+        return axios(withBaseUrl('movie/search') + `&query=${movie}`);
+    }
 }

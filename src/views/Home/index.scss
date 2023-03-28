@@ -1,0 +1,9 @@
+@use '../../sass/variables' as *;
+@use '../../sass/mixins' as *;
+
+.home{
+    display: grid;
+    grid-template-columns:  auto auto auto auto;
+    margin: 2em;
+    row-gap: 2em;
+}
