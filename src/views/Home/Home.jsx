@@ -7,20 +7,40 @@ const Home = ({ searchMovie }) => {
   const [movies, setMovies] = useState([]);
 
   async function getMovies() {
-    const { data: { results } } = await MovieService.getMovies();
+    const {
+      data: { results },
+    } = await MovieService.getMovies();
+    setMovies(results);
+  }
+
+  async function getSearchMovies(movieString) {
+    const {
+      data: { results },
+    } = await MovieService.searchMovies(movieString);
+    console.log(movieString);
     setMovies(results);
   }
 
   useEffect(() => {
-      getMovies();
+    getMovies();
   }, []);
+
+  useEffect(() => {
+    if (searchMovie) {
+      getSearchMovies(searchMovie);
+    }
+
+    if (searchMovie === "") {
+      getMovies();
+    }
+  }, [searchMovie]);
 
   return (
     <>
       <section className="home">
         {movies.map((movie) => (
           <div key={movie.id} className="home__card">
-            <MovieCard movieProp={movie}/>
+            <MovieCard movieProp={movie} />
           </div>
         ))}
       </section>

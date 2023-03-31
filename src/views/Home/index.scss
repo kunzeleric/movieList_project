@@ -3,7 +3,16 @@
 
 .home{
     display: grid;
-    grid-template-columns:  auto auto auto auto;
-    margin: 2em;
-    row-gap: 2em;
+    grid: auto-flow / 1fr 1fr 1fr 1fr;
+    padding: 2em;
+    row-gap: 2.5em;
+    justify-items: center;
+}
+
+@media (max-width: 550px){
+    .home{
+        grid: auto-flow / 1fr;
+        height: auto;
+    }
+
 }

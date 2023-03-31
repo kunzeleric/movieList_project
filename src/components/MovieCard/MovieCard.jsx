@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.scss";
 
 const MovieCard = ({ movieProp }) => {
@@ -11,8 +12,9 @@ const MovieCard = ({ movieProp }) => {
           />
         </div>
         <div className="moviecard__description">
-          <p className="moviecard__description-title">{movieProp.title}</p>
-          <button className="moviecard__description-button">Ver Mais</button>
+          <h4 className="moviecard__description-title">{movieProp.title}</h4>
+          <p className="moviecard__description-summary">{movieProp.overview}</p>
+          <Link to={`/movie/${movieProp.id}`}><button className="moviecard__description-button">Ver Mais</button></Link>
         </div>
       </div>
     </div>

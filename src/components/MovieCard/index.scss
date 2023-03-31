@@ -29,8 +29,7 @@
     img {
       width: 100%;
       height: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-radius: 10px;
       object-fit: cover;
     }
   }
@@ -41,38 +40,49 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 2em;
     justify-content: center;
     align-items: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    background-color: $purple-dark;
     transform: rotateY(180deg);
+    border-radius: 10px;
+    color: $purple-grey-light;
 
     &-title {
       font-family: $font-menu;
       font-weight: 600;
-      font-size: 1em;
-      color: #fff;
+      font-size: 1.4em;
+      color: $purple-grey-light;
       margin-bottom: 0.5em;
+      padding: 0 0.5em;
+    }
+
+    &-summary {
+      font-family: $font-menu;
+      padding: 0 0.5em;
+      text-justify: auto;
     }
 
     &-button {
-      display: inline-block;
+      display: flex;
       background-color: $light-purple;
-      width: 50%;
       padding: 0.2em 1.3em;
       font-family: $font-title;
       font-size: 1.2rem;
       font-weight: 500;
-      color: $purple-grey-light;
       border: 0;
       border-radius: 8px;
       cursor: pointer;
       margin-bottom: 0.5em;
-      transition: all 0.5s ease;
+      transition: all 0.5s ease-in-out;
+      color: $purple-grey-light;
     }
 
     &-button:hover {
       background-color: $purple-dark;
+      border: 2px solid $purple-grey-light;
     }
   }
 }

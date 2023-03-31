@@ -1,0 +1,106 @@
+@use "../../sass/variables" as *;
+@use "../../sass/mixins" as *;
+
+.MovieDetail {
+  display: flex;
+  align-items: center;
+  background-color: $purple;
+  padding: 2vw 3vw;
+  gap: 2em;
+  height: auto;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-family: $font-title;
+    font-size: 2em;
+    color: $purple-grey-light;
+  }
+  &__img {
+    margin-bottom: 0.5em;
+
+    img {
+      max-width: 50vw;
+      border-radius: 10px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    &-card {
+      font-family: $font-menu;
+      color: $purple-grey-light;
+      width: 80%;
+
+      h3 {
+        padding-bottom: 0.5em;
+        font-size: 1.5em;
+        text-decoration: underline;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+    }
+
+    &-btn {
+      width: 17vw;
+      height: 7vh;
+      border-radius: 10px;
+      border: 0;
+      background-color: $purple-dark;
+      color: $purple-grey-light;
+      text-transform: uppercase;
+      font-family: $font-title;
+      font-size: 2em;
+      transition: all 0.4 s ease-in-out;
+      cursor: pointer;
+    }
+
+    &-btn:hover {
+      background-color: $purple-grey-light;
+      border: 2px solid $purple-dark;
+      color: $purple-darker;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .MovieDetail {
+    flex-direction: column;
+    padding: 1em 0.1rem;
+    gap: 2em;
+
+    &__title{
+      font-size: 2.5em;
+    }
+
+    &__img {
+      margin-bottom: 0.5em;
+  
+      img {
+        max-width: 100%;
+        overflow: hidden;
+      }
+    }
+  
+    &__details {
+      &-card {
+        p {
+          font-size: 1.2em;
+        }
+      }
+  
+      &-btn {
+        width: 10em;
+      }
+    }
+  }
+
+}

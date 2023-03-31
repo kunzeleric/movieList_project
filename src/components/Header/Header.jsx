@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './index.scss';
 
 const Header = (props) => {
@@ -9,10 +10,9 @@ const Header = (props) => {
     event.target[0].value = "";
   }
 
-
   return (
     <header className="header">
-        <img className="header__logo" src={'movie-logo.png'} alt="Logo" />
+        <Link to='/'><img className="header__logo" src={'movie-logo.png'} alt="Logo" /></Link>
         <h1 className="header__title">Deplayer movie selection</h1>
         <ul className="header__menu">
           <li>Categories</li> 
