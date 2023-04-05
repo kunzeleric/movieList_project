@@ -27,7 +27,7 @@ const MovieDetail = () => {
           />
         </div>
       </div>
-      
+
       <div className="MovieDetail__details">
         <div className="MovieDetail__details-card">
           <h3>Budget Spent</h3>

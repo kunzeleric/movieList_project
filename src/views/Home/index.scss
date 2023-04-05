@@ -2,17 +2,10 @@
 @use '../../sass/mixins' as *;
 
 .home{
-    display: grid;
-    grid: auto-flow / 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2em;
     padding: 2em;
-    row-gap: 2.5em;
-    justify-items: center;
-}
-
-@media (max-width: 550px){
-    .home{
-        grid: auto-flow / 1fr;
-        height: auto;
-    }
-
+    background-color: $purple;
 }

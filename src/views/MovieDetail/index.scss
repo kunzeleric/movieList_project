@@ -1,13 +1,16 @@
 @use "../../sass/variables" as *;
 @use "../../sass/mixins" as *;
 
+
 .MovieDetail {
   display: flex;
-  align-items: center;
-  background-color: $purple;
-  padding: 2vw 3vw;
+  padding: 4em 3em;
   gap: 2em;
-  height: auto;
+  background-color: $purple;
+
+  &-container{
+    width: 50%;
+  }
 
   &__title {
     text-align: center;
@@ -17,26 +20,24 @@
     color: $purple-grey-light;
   }
   &__img {
-    margin-bottom: 0.5em;
-
+    
     img {
-      max-width: 50vw;
+      max-width: 100%;
       border-radius: 10px;
     }
-  }
+  } 
 
   &__details {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 50%;
 
     &-card {
       font-family: $font-menu;
       color: $purple-grey-light;
-      width: 80%;
 
       h3 {
         padding-bottom: 0.5em;
@@ -50,7 +51,7 @@
     }
 
     &-btn {
-      width: 17vw;
+      width: 100%;
       height: 7vh;
       border-radius: 10px;
       border: 0;
@@ -58,9 +59,13 @@
       color: $purple-grey-light;
       text-transform: uppercase;
       font-family: $font-title;
-      font-size: 2em;
+      font-size: 2rem;
       transition: all 0.4 s ease-in-out;
       cursor: pointer;
+    }
+
+    a{
+      width: 50%;
     }
 
     &-btn:hover {
@@ -71,35 +76,38 @@
   }
 }
 
-@media (max-width: 550px){
+@media (max-width: 1000px){
   .MovieDetail {
     flex-direction: column;
-    padding: 1em 0.1rem;
+    padding: 1em 1em;
     gap: 2em;
 
+    &-container{
+      width: auto;
+    }
+
     &__title{
-      font-size: 2.5em;
+      font-size: 2rem;
     }
 
     &__img {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.5rem;
   
-      img {
-        max-width: 100%;
-        overflow: hidden;
-      }
     }
   
     &__details {
+      width: auto;
+
       &-card {
         p {
-          font-size: 1.2em;
+          font-size: 1.1rem;
+        }
+
+        h3{
+          font-size: 1.3rem;
         }
       }
-  
-      &-btn {
-        width: 10em;
-      }
+
     }
   }
 
