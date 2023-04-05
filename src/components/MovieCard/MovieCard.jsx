@@ -7,7 +7,7 @@ const MovieCard = ({ movieProp }) => {
       <div className="moviecard-flip">
         <div className="moviecard__img">
           <img
-            src={`https://image.tmdb.org/t/p/w1280${movieProp.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w1280/${movieProp.poster_path}`}
             alt={movieProp.title}
           />
         </div>

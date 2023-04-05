@@ -34,17 +34,21 @@
         gap: 2em;
         font-family: 'Chakra Petch', sans-serif;
         font-weight: 600;
-        color: $purple-grey-light;
 
         li{
             cursor: pointer;
             transition: all 0.8s ease;
             font-size: 1.2rem;
+            
         }
 
         li:hover{
             color: $light-purple;
             text-decoration: underline;
+        }
+
+        a{
+            color: $purple-grey-light;
         }
     }
 

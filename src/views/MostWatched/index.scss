@@ -1,0 +1,12 @@
+@use "../../sass/variables" as *;
+@use "../../sass/mixins" as *;
+
+
+.mostWatched{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2em;
+    padding: 2em;
+    background-color: $purple;
+}

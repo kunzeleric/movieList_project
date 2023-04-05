@@ -4,7 +4,7 @@
 
 .MovieDetail {
   display: flex;
-  padding: 4em 3em;
+  padding: 2em 3em;
   gap: 2em;
   background-color: $purple;
 
@@ -14,9 +14,8 @@
 
   &__title {
     text-align: center;
-    margin-bottom: 0.5em;
     font-family: $font-title;
-    font-size: 2em;
+    font-size: 3em;
     color: $purple-grey-light;
   }
   &__img {
@@ -30,6 +29,7 @@
   &__details {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 1em;
     align-items: center;
     text-align: center;
@@ -76,6 +76,27 @@
   }
 }
 
+
+.recommend{
+  &__title{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: $font-title;
+    font-size: 2.5em;
+    margin-left: 10rem;
+  }
+
+  &__section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $purple;
+    padding: 3em;
+    gap: 1em;
+  }
+}
+
+
 @media (max-width: 1000px){
   .MovieDetail {
     flex-direction: column;
@@ -110,5 +131,13 @@
 
     }
   }
+
+
+.recommend{
+  &__section{
+   flex-direction: column;
+  }
+}
+
 
 }

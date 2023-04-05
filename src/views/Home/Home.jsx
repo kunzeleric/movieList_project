@@ -10,6 +10,7 @@ const Home = ({ searchMovie }) => {
     const {
       data: { results },
     } = await MovieService.getMovies();
+    console.log(results);
     setMovies(results);
   }
 
@@ -17,20 +18,20 @@ const Home = ({ searchMovie }) => {
     const {
       data: { results },
     } = await MovieService.searchMovies(movieString);
-    console.log(movieString);
     setMovies(results);
   }
 
+  //chama a função getMovies ao montar o componente
   useEffect(() => {
     getMovies();
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { //chama função getSearchMovies ao receber input de busca, caso contrário chama a getMovies (chamada ao ter o state atualizado)
     if (searchMovie) {
       getSearchMovies(searchMovie);
     }
 
-    if (searchMovie === "") {
+    if (!searchMovie.trim()) {
       getMovies();
     }
   }, [searchMovie]);
