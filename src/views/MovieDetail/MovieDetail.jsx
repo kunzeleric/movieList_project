@@ -16,10 +16,14 @@ const MovieDetail = () => {
 
   async function getRecommendedMovies() {
     let checkMovie = false;
+    let arrayFilmes = [];
+    
     const {
       data: { results },
     } = await MovieService.getRecommendations(id);
-    let arrayFilmes = [];
+
+
+
     if (results.length == 0) {
       document.getElementById('recommend').style.display = 'none';
     } else {

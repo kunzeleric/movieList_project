@@ -17,6 +17,7 @@ const Home = ({ searchMovie }) => {
     const {
       data: { results },
     } = await MovieService.searchMovies(movieString);
+
     setMovies(results);
   }
 

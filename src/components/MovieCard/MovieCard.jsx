@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import "./index.scss";
 
 const MovieCard = ({ movieProp }) => {
-  return (
+
+  if(movieProp.poster_path === null){
+    return null;
+  }
+
+  else return (
     <div className="moviecard">
       <div className="moviecard-flip">
         <div className="moviecard__img">
