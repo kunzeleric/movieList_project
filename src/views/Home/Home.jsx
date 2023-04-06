@@ -10,7 +10,6 @@ const Home = ({ searchMovie }) => {
     const {
       data: { results },
     } = await MovieService.getMovies();
-    console.log(results);
     setMovies(results);
   }
 

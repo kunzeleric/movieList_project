@@ -15,19 +15,24 @@ const MovieDetail = () => {
   }
 
   async function getRecommendedMovies() {
+    let checkMovie = false;
     const {
       data: { results },
     } = await MovieService.getRecommendations(id);
     let arrayFilmes = [];
-    for (let i = 0; i < results.length; i++) {
-      if(results[i].backdrop_path === null){
-        i++;
+    if (results.length == 0) {
+      document.getElementById('recommend').style.display = 'none';
+    } else {
+      for (let i = 0; i < results.length; i++) {
+        if (results[i].backdrop_path === null) {
+          i++;
+        }
+        arrayFilmes.push(results[i]);
       }
 
-      arrayFilmes.push(results[i]);
-      console.log(results[i]);
+      setRecommendedMovie(arrayFilmes);
+      FD;
     }
-    setRecommendedMovie(arrayFilmes);
   }
 
   useEffect(() => {
@@ -77,7 +82,7 @@ const MovieDetail = () => {
         </div>
       </section>
 
-      <section className="recommend">
+      <section className="recommend" id="recommend">
         <h2 className="recommend__title">{`Since you're interested in ${movie.title}, check these below...`}</h2>
         <div className="recommend__section">
           {recommendedMovies.map((movie) => (

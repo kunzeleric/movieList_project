@@ -5,7 +5,6 @@ const url = 'https://api.themoviedb.org/3/'
 
 const withBaseUrl = (path) => `${url}${path}?api_key=${key}`;
 const discoverUrl = (path) => `${url}${path}?api_key=${key}&sort_by=vote_count.desc`;
-const recommendUrl = (path) => `${url}${path}?api_key=${key}&total_results=5`
 
 export class MovieService {
     static getMovies() {
@@ -25,6 +24,6 @@ export class MovieService {
     }
 
     static getRecommendations(id){
-        return axios(recommendUrl(`movie/${id}/recommendations`));
+        return axios(withBaseUrl(`movie/${id}/recommendations`));
     }
 }
