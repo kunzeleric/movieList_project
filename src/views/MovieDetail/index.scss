@@ -5,8 +5,7 @@
   display: flex;
   padding: 2em 3em;
   gap: 2em;
-  background-color: $purple;
-
+  background: $background-alternative;
   &-container{
     display: flex;
     flex-direction: column;
@@ -18,7 +17,7 @@
     text-align: center;
     font-family: $font-title;
     font-size: 3em;
-    color: $purple-grey-light;
+    color: $grey-light;
   }
   &__img {
     
@@ -36,10 +35,10 @@
     align-items: center;
     text-align: center;
     width: 50%;
-
+    color: #fff;
+    
     &-card {
       font-family: $font-menu;
-      color: $purple-grey-light;
 
       h3 {
         padding-bottom: 0.5em;
@@ -57,8 +56,6 @@
       height: 7vh;
       border-radius: 10px;
       border: 0;
-      background-color: $purple-dark;
-      color: $purple-grey-light;
       text-transform: uppercase;
       font-family: $font-title;
       font-size: 2rem;
@@ -71,9 +68,8 @@
     }
 
     &-btn:hover {
-      background-color: $purple-grey-light;
-      border: 2px solid $purple-dark;
-      color: $purple-darker;
+      border: 2px solid #ccc;
+
     }
   }
 }
@@ -88,11 +84,11 @@
 
 
 .recommend{
-
+  background: $background-alternative;
+  
   &__section{
     display: flex;
     flex-wrap: wrap;
-    background-color: $purple;
     padding: 3em;
     gap: 3em;
   }
@@ -136,7 +132,6 @@
   }
 
   .text{
-    background-color: $purple;
     margin: 0;
     text-align: center;
     font-size: 2rem;

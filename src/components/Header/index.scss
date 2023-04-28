@@ -8,13 +8,12 @@
     top: 0;
     width: 100%;
     z-index: 1;
-    padding: 0.8rem;
-    background-color: $purple-dark;
     box-shadow: 0px 13px 15px rgba(0,0,0,0.7);
-    border-bottom: 0.1em solid $purple-grey-light;
+    border-bottom: 0.1em solid $grey-light;
+    background: $background;
 
     &__logo{
-        width: 10em;
+        width: 9em;
         margin: 0 2em;
     }
 
@@ -24,41 +23,39 @@
         font-family: 'Bebas Neue', cursive;
         letter-spacing: 3px;
         text-decoration: underline;
-        color: $purple-grey-light;
+        color: $grey-light;
     }
 
     &__menu{
         display: flex;
         flex-wrap: wrap;
-        gap: 2em;
+        gap: 4em;
         font-family: 'Chakra Petch', sans-serif;
         font-weight: 600;
 
         li{
             cursor: pointer;
             transition: all 0.8s ease;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             
         }
 
         li:hover{
-            color: $light-purple;
             text-decoration: underline;
         }
 
         a{
-            color: $purple-grey-light;
+            color: $grey-light;
         }
     }
 
     &__search{
         input{
-            width: 18rem;
-            height: 3rem;
+            width: 25rem;
+            height: 3.5rem;
             border-radius: 1.2em;
             text-indent: 0.8rem;
-            font-size: 1rem;
-            color: $purple-darker;
+            font-size: 1.2rem;
         }
     }
 }

@@ -7,7 +7,6 @@ const withBaseUrl = (path) => `${url}${path}?api_key=${key}`;
 const discoverUrl = (path) => `${url}${path}?api_key=${key}&sort_by=vote_count.desc`;
 const genreUrl = (path, genreId) => `${url}${path}?api_key=${key}&sort_by=popularity.desc&with_genres=${genreId}`;
 
-
 export class MovieService {
     static getMovies() {
         return axios(withBaseUrl('movie/popular'));

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/movie-logo.png';
+import Logo from '../../assets/logo.svg';
 import './index.scss';
 
 const Header = (props) => {
@@ -14,7 +14,6 @@ const Header = (props) => {
   return (
     <header className="header">
         <Link to='/'><img className="header__logo" src={Logo} alt="Logo" /></Link>
-        <h1 className="header__title">Deplayer movie selection</h1>
         <ul className="header__menu">
           <Link to='/genres'><li>Categories</li></Link>
           <Link to='/mostwatched/'><li>Most Watched</li></Link>

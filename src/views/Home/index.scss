@@ -1,9 +1,8 @@
 @use "../../sass/variables" as *;
 
 .home {
-  background-color: $purple;
-  
 
+  
   &__section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -11,7 +10,7 @@
     column-gap: 4em;
     row-gap: 2em;
     padding: 3em;
-
+    background: $background-alternative;
   }
 
 }

@@ -85,8 +85,8 @@ const MovieDetail = () => {
         </div>
       </section>
 
-    <h2 className="text">{`Since you're interested in ${movie.title}, check these below...`}</h2>
         <section className="recommend" id="recommend">
+        <h2 className="text">{`Since you're interested in ${movie.title}, check these below...`}</h2>
           <div className="recommend__section">
             {recommendedMovies.map((movie) => (
               <div key={movie.id} className="recommend_card">
