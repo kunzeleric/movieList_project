@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./index.scss";
 import { MovieService } from "../../api/MovieService";
 import MovieCard from "../../components/MovieCard/MovieCard";
+import "./index.scss";
 
 const MostWatched = ({ searchMovie }) => {
   const [listMovies, setListMovies] = useState([]);
@@ -9,7 +9,7 @@ const MostWatched = ({ searchMovie }) => {
   async function discoverMovies() {
     const {
       data: { results },
-    } = await MovieService.getCategories();
+    } = await MovieService.getMostWatched();
     console.log(results);
     setListMovies(results);
   }

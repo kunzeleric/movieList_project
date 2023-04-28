@@ -19,8 +19,12 @@ export class MovieService {
         return axios(withBaseUrl('search/movie') + `&query=${movie}`);
     }
 
-    static getCategories(){
-        return axios(discoverUrl('discover/movie'));
+    static getGenres(){
+        return axios(withBaseUrl('genre/movie/list'));
+    }
+
+    static getMostWatched(){
+        return axios(discoverUrl('discover/movie/'));
     }
 
     static getRecommendations(id){

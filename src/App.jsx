@@ -5,6 +5,7 @@ import MovieDetail from "./views/MovieDetail/MovieDetail";
 import { useState } from "react";
 import './index.scss';
 import MostWatched from "./views/MostWatched/MostWatched";
+import Categories from "./views/Categories/Categories";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home searchMovie={search}/>}/>
         <Route path="/movie/:id" element={<MovieDetail/>}/>
         <Route path='/mostwatched/' element={<MostWatched searchMovie={search}/>} />
+        <Route path='/genres/' element={<Categories/>}/>
       </Routes>
     </div>
     </>

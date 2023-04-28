@@ -16,7 +16,7 @@ const Header = (props) => {
         <Link to='/'><img className="header__logo" src={Logo} alt="Logo" /></Link>
         <h1 className="header__title">Deplayer movie selection</h1>
         <ul className="header__menu">
-          <Link><li>Categories</li></Link>
+          <Link to='/genres'><li>Categories</li></Link>
           <Link to='/mostwatched/'><li>Most Watched</li></Link>
           <Link to='/'><li>Top Rated</li></Link>
         </ul>

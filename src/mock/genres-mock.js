@@ -1,0 +1,21 @@
+export const GENRES_MOCK = [
+    { name: 'Action', imgPath: './action.jpg' },
+    { name: 'Adventure', imgPath: './adventure.jpg' },
+    { name: 'Animation', imgPath: './animation.jpg' },
+    { name: 'Comedy', imgPath: './comedy.jpg' },
+    { name: 'Crime', imgPath: './crime.jpg' },
+    { name: 'Documentary', imgPath: './documentary.jpg' },
+    { name: 'Drama', imgPath: './drama.jpg' },
+    { name: 'Family', imgPath: './family.jpg' },
+    { name: 'Fantasy', imgPath: './fantasy.jpg' },
+    { name: 'History', imgPath: './history.jpg' },
+    { name: 'Horror', imgPath: './horror.jpg' },
+    { name: 'Music', imgPath: './music.jpg' },
+    { name: 'Mystery', imgPath: './mystery.jpg' },
+    { name: 'Romance', imgPath: './romance.jpg' },
+    { name: 'Science Fiction', imgPath: './science-fiction.jpg' },
+    { name: 'TV Movie', imgPath: './tv-movie.jpg' },
+    { name: 'Thriller', imgPath: './thriller.jpg' },
+    { name: 'War', imgPath: './war.jpg' },
+    { name: 'Western', imgPath: './western.jpg' }
+]

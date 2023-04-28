@@ -16,8 +16,7 @@ const Home = ({ searchMovie }) => {
   async function getSearchMovies(movieString) {
     const {
       data: { results },
-    } = await MovieService.searchMovies(movieString);
-
+        } = await MovieService.searchMovies(movieString);
     setMovies(results);
   }
 
@@ -26,7 +25,8 @@ const Home = ({ searchMovie }) => {
     getMovies();
   }, []);
 
-  useEffect(() => { //chama função getSearchMovies ao receber input de busca, caso contrário chama a getMovies (chamada ao ter o state atualizado)
+  useEffect(() => {
+    //chama função getSearchMovies ao receber input de busca, caso contrário chama a getMovies (chamada ao ter o state atualizado)
     if (searchMovie) {
       getSearchMovies(searchMovie);
     }
@@ -39,11 +39,13 @@ const Home = ({ searchMovie }) => {
   return (
     <>
       <section className="home">
-        {movies.map((movie) => (
-          <div key={movie.id} className="home__card">
-            <MovieCard movieProp={movie} />
-          </div>
-        ))}
+        <div className="home__section">
+          {movies.map((movie) => (
+            <div key={movie.id} className="home__card">
+              <MovieCard movieProp={movie} />
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );

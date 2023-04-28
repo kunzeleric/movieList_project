@@ -1,8 +1,7 @@
 @use "../../sass/variables" as *;
 @use "../../sass/mixins" as *;
 
-
-.mostWatched{
+.genres{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
