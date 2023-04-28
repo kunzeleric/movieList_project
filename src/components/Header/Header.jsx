@@ -18,7 +18,7 @@ const Header = (props) => {
         <ul className="header__menu">
           <Link to='/genres'><li>Categories</li></Link>
           <Link to='/mostwatched/'><li>Most Watched</li></Link>
-          <Link to='/'><li>Top Rated</li></Link>
+          <Link to='/toprated'><li>Top Rated</li></Link>
         </ul>
         <form onSubmit={handleSubmit} className="header__search">
           <input type="text" placeholder='Search your movie here' />

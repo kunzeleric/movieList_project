@@ -1,5 +1,5 @@
 @use "../../sass/variables" as *;
-@use "../../sass/mixins" as *;
+
 
 .card__genre{
     position: relative;
@@ -10,11 +10,13 @@
     &-img{
         width: 350px;
         height: 400px;
-        transition: transform 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        opacity: 0.7;
     }
 
     &-img:hover{
         transform: scale(1.1);
+        opacity: 1;
     }
 
     &-title{

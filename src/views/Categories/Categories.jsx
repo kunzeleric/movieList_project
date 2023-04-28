@@ -2,6 +2,7 @@ import "./index.scss";
 import { MovieService } from "../../api/MovieService.js";
 import { useEffect, useState } from "react";
 import GenreCard from "../../components/GenreCard/GenreCard";
+import { Link } from "react-router-dom";
 
 const Categories = () => {
   const [genres, setGenres] = useState([]);
@@ -21,7 +22,7 @@ const Categories = () => {
     <section className="genres">
       {
         genres.map((genre) => (
-          <GenreCard data={genre} />
+          <Link to={`/genres/${genre.id}`} ><GenreCard data={genre} /></Link>
         ))
       }
     </section>
