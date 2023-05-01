@@ -1,10 +1,10 @@
 @use "../../sass/variables" as *;
 
 .sidebar {
-  width: 20%;
+  padding-inline: 2em;
   position: sticky;
   box-shadow: 5px 13px 15px rgba(0, 0, 0, 0.7);
-
+  transition: all 1s ease;
   &__nav {
     color: #fff;
     display: flex;
@@ -13,44 +13,134 @@
     align-items: center;
 
     &-list {
-      margin-top: 4em;
+      margin-top: 8em;
 
-      li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 2em;
-        height: 3em;
+      &__item {
+        margin-block: 2em;
         cursor: pointer;
-        transition: all 0.5s ease-in-out;
         border-radius: 1.5em;
+
+        &-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+          height: 4vw;
+          padding-inline: 1em;
+        }
       }
 
-      li:hover {
+      p {
+        font-size: 1.4em;
+      }
+
+      &__item:hover {
         background-color: rgb(4, 4, 4);
-        width: 220px;
         border-radius: 1.5em;
       }
 
       .active {
         background-color: rgb(4, 4, 4);
-        width: 220px;
         border: none;
         border-radius: 1.5em;
       }
     }
   }
+
+  .icon {
+    height: 35px;
+  }
+
+  .iconMenu {
+    height: 45px;
+    position: absolute;
+    top: 40px;
+    cursor: pointer;
+  }
+
+  .link {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: $font-menu;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .resize {
+    width: 1%;
+  }
 }
 
-.icon {
-  margin-right: 0.6em;
-  height: 30px;
+/* TABLETS */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 35%;
+
+    &__nav {
+      &-list {
+        &__item {
+          &-wrapper {
+            height: 6vw;
+            padding-inline: 0.5em;
+          }
+        }
+
+        p {
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .icon {
+      height: 30px;
+    }
+
+    .iconMenu {
+      height: 40px;
+      top: 50px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+
+  .resize {
+    width: 10%;
+  }
 }
 
-.link {
-  color: #fff;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  font-family: $font-menu;
+/* MOBILE */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 22%;
+
+    &__nav {
+      padding-inline: 0.5em;
+      &-list {
+        margin-top: 1em;
+        &__item {
+          &-wrapper {
+            flex-direction: column;
+            text-align: center;
+            height: auto;
+            padding: 1em;
+          }
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+    .icon {
+      height: 30px;
+    }
+
+    .iconMenu {
+      display: none;
+    }
+  }
 }

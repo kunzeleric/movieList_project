@@ -1,114 +1,97 @@
-@use '../../sass/variables' as *;
+@use "../../sass/variables" as *;
 
-.header{
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0px 13px 15px rgba(0, 0, 0, 0.7);
+  border-bottom: 0.1em solid $grey-light;
+  background: $background;
+
+  &__logo {
+    width: 9em;
+    margin: 0 2em;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    color: $grey-light;
+  }
+
+  &__menu {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    box-shadow: 0px 13px 15px rgba(0,0,0,0.7);
-    border-bottom: 0.1em solid $grey-light;
-    background: $background;
+    flex-wrap: wrap;
+    gap: 4em;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
 
-    &__logo{
-        width: 9em;
-        margin: 0 2em;
+    li {
+      cursor: pointer;
+      transition: all 0.8s ease;
+      font-size: 1.8rem;
     }
 
-    &__title{
-        text-transform: uppercase;
-        font-size: 2.5rem;
-        font-family: 'Bebas Neue', cursive;
-        letter-spacing: 3px;
-        text-decoration: underline;
-        color: $grey-light;
+    li:hover {
+      text-decoration: underline;
     }
 
-    &__menu{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4em;
-        font-family: 'Chakra Petch', sans-serif;
-        font-weight: 600;
-
-        li{
-            cursor: pointer;
-            transition: all 0.8s ease;
-            font-size: 1.8rem;
-            
-        }
-
-        li:hover{
-            text-decoration: underline;
-        }
-
-        a{
-            color: $grey-light;
-        }
+    a {
+      color: $grey-light;
     }
+  }
 
-    &__search{
-        input{
-            width: 25rem;
-            height: 3.5rem;
-            border-radius: 1.2em;
-            text-indent: 0.8rem;
-            font-size: 1.2rem;
-        }
+  &__search {
+    input {
+      width: 25rem;
+      height: 3.5rem;
+      border-radius: 1.2em;
+      text-indent: 0.8rem;
+      font-size: 1.2rem;
     }
+  }
 }
 
-@media (max-width: 1000px){
+/* TABLET */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 0.2em;
 
-    .header{
-        flex-direction: column;
-        gap: 0.2em;
-    
-        &__logo{
-            width: 10rem;
-        }
-    
-        &__title{
-            font-size: 2rem;
-        }
-    
-        &__menu{
-            gap: 1em;
-
-            li{
-                font-size: 1rem;
-            }
-        }
-    
-        &__search{
-            input{
-                margin: 0.8em 0;
-                text-indent: 0.8em;
-                font-size: 1em;
-            }
-            
-        }
+    &__logo {
+      width: 10rem;
     }
+
+    &__search {
+      input {
+        margin: 0.8em 0;
+        text-indent: 0.8em;
+        font-size: 1em;
+      }
+    }
+  }
 }
 
-@media (max-width: 500px){
-
-    .header{
-        &__logo{
-            width: 8rem;
-        }
-    
-        &__title{
-            font-size: 1.5rem;
-        }
-    
-        &__menu{
-
-            li{
-                margin-top: 0.5rem;
-            }
-        }
+/* MOBILE */
+@media (max-width: 480px) {
+  .header {
+    &__logo {
+      width: 10rem;
     }
+    &__search {
+        input {
+          width: 70vw;
+          margin: 1em 0;
+          text-indent: 1em;
+          font-size: 1.1em;
+        }
+      }
+  }
 }

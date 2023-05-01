@@ -85,3 +85,50 @@
 .moviecard:hover .moviecard-flip {
   transform: rotateY(180deg);
 }
+
+/* TABLET */
+@media (max-width: 900px){
+  .moviecard {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+
+    &__description {
+  
+      &-title {
+        font-size: 1em;
+      }
+  
+      &-summary {
+        display: none;
+      }
+  
+      &-button {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px){
+  .moviecard {
+    width: 220px;
+    height: 350px;
+  
+    &__description {
+  
+      &-title {
+        font-size: 1.1em;
+      }
+  
+      &-summary {
+        font-size: 0.8em;
+      }
+  
+      &-button {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

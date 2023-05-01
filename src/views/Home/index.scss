@@ -3,6 +3,9 @@
 
 .home {
   width: 100%;
+  background: $background-alternative;
+  overflow: auto;
+  z-index: 0;
 
   &__section {
     display: grid;
@@ -11,7 +14,38 @@
     column-gap: 4em;
     row-gap: 2em;
     padding: 3em;
-    background: $background-alternative;
+
   }
 
 }
+
+/* TABLET */
+@media (max-width: 900px){
+.home {
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1em;
+    padding: 1em 0;
+  }
+}
+}
+
+/* MOBILE */
+@media (max-width: 480px){
+  .home {
+    width: 100%;
+  
+    &__section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      justify-items: center;
+      column-gap: 4em;
+      row-gap: 2em;
+      padding: 3em;
+      background: $background-alternative;
+    }
+  }
+  }
+  
