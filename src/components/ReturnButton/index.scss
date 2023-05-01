@@ -1,0 +1,18 @@
+@use "../../sass/variables" as *;
+
+.button__general {
+  width: 50%;
+  height: 7vh;
+  border-radius: 10px;
+  border: 0;
+  text-transform: uppercase;
+  font-family: $font-title;
+  font-size: 2.5rem;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.button__general:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}

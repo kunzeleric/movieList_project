@@ -1,0 +1,56 @@
+@use "../../sass/variables" as *;
+
+.sidebar {
+  width: 20%;
+  position: sticky;
+  box-shadow: 5px 13px 15px rgba(0, 0, 0, 0.7);
+
+  &__nav {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-list {
+      margin-top: 4em;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 2em;
+        height: 3em;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        border-radius: 1.5em;
+      }
+
+      li:hover {
+        background-color: rgb(4, 4, 4);
+        width: 220px;
+        border-radius: 1.5em;
+      }
+
+      .active {
+        background-color: rgb(4, 4, 4);
+        width: 220px;
+        border: none;
+        border-radius: 1.5em;
+      }
+    }
+  }
+}
+
+.icon {
+  margin-right: 0.6em;
+  height: 30px;
+}
+
+.link {
+  color: #fff;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-family: $font-menu;
+}

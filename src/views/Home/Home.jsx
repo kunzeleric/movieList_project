@@ -16,7 +16,7 @@ const Home = ({ searchMovie }) => {
   async function getSearchMovies(movieString) {
     const {
       data: { results },
-        } = await MovieService.searchMovies(movieString);
+    } = await MovieService.searchMovies(movieString);
     setMovies(results);
   }
 

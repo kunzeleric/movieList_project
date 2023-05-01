@@ -1,8 +1,9 @@
 @use "../../sass/variables" as *;
 
-.home {
 
-  
+.home {
+  width: 100%;
+
   &__section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

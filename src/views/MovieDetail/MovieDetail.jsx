@@ -1,8 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { MovieService } from "../../api/MovieService";
 import { useEffect, useState } from "react";
-import "./index.scss";
 import MovieCard from "../../components/MovieCard/MovieCard";
+import "./index.scss";
+import ReturnButton from "../../components/ReturnButton/ReturnButton";
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -25,7 +26,6 @@ const MovieDetail = () => {
       document.getElementById("recommend").style.display = "none";
     } else {
       for (let i = 0; i < results.length; i++) {
-        let counter = 0;
         if (results[i].backdrop_path === null) {
           continue;
         }
@@ -45,7 +45,7 @@ const MovieDetail = () => {
     getRecommendedMovies();
   }, [id]);
   return (
-    <>
+    <main className="MovieDetail__main">
       <section className="MovieDetail">
         <div className="MovieDetail-container">
           <h1 className="MovieDetail__title">{movie.title}</h1>
@@ -79,23 +79,21 @@ const MovieDetail = () => {
             <h3>Release Date</h3>
             <p>{movie.release_date}</p>
           </div>
-          <Link to={"/"}>
-            <button className="MovieDetail__details-btn">Voltar</button>
-          </Link>
+            <ReturnButton/>
         </div>
       </section>
 
-        <section className="recommend" id="recommend">
+      <section className="recommend" id="recommend">
         <h2 className="text">{`Since you're interested in ${movie.title}, check these below...`}</h2>
-          <div className="recommend__section">
-            {recommendedMovies.map((movie) => (
-              <div key={movie.id} className="recommend_card">
-                <MovieCard movieProp={movie} />
-              </div>
-            ))}
-          </div>
-        </section>
-    </>
+        <div className="recommend__section">
+          {recommendedMovies.map((movie) => (
+            <div key={movie.id} className="recommend_card">
+              <MovieCard movieProp={movie} />
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 };
 

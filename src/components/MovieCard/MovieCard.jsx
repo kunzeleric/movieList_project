@@ -19,7 +19,7 @@ const MovieCard = ({ movieProp }) => {
         <div className="moviecard__description">
           <h4 className="moviecard__description-title">{movieProp.title}</h4>
           <p className="moviecard__description-summary">{movieProp.overview}</p>
-          <Link to={`/movie/${movieProp.id}`}><button className="moviecard__description-button">Ver Mais</button></Link>
+          <Link to={`/${movieProp.id}`}><button className="moviecard__description-button">Ver Mais</button></Link>
         </div>
       </div>
     </div>

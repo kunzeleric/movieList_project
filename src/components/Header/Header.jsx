@@ -14,11 +14,6 @@ const Header = (props) => {
   return (
     <header className="header">
         <Link to='/'><img className="header__logo" src={Logo} alt="Logo" /></Link>
-        <ul className="header__menu">
-          <Link to='/genres'><li>Categories</li></Link>
-          <Link to='/mostwatched/'><li>Most Watched</li></Link>
-          <Link to='/toprated'><li>Top Rated</li></Link>
-        </ul>
         <form onSubmit={handleSubmit} className="header__search">
           <input type="text" placeholder='Search your movie here' />
         </form>

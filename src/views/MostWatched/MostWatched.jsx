@@ -27,7 +27,6 @@ const MostWatched = ({ searchMovie }) => {
   }, []);
 
   useEffect(() => {
-    //chama função getSearchMovies ao receber input de busca, caso contrário chama a getMovies (chamada ao ter o state atualizado)
     if (searchMovie) {
       getSearchMovies(searchMovie);
     }

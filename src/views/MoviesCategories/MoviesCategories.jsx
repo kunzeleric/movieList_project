@@ -4,28 +4,53 @@ import { useEffect, useState } from "react";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import "./index.scss";
 
-const MoviesCategories = () => {
+const MoviesCategories = ({ searchMovie }) => {
   const { genre } = useParams();
-  const [movies, setMovies] = useState([]);
+  const [listMovies, setListMovies] = useState([]);
+  const [listSearchMovies, setListSearchMovies] = useState([]);
 
   async function getMoviesByGenre(genre) {
     const {
       data: { results },
     } = await MovieService.getMoviesFromGenre(genre);
-    setMovies(results);
+    setListMovies(results);
+  }
+
+  async function getSearchMovies(movieString) {
+    const {
+      data: { results },
+    } = await MovieService.searchMovies(movieString);
+    setListSearchMovies(results);
   }
 
   useEffect(() => {
     getMoviesByGenre(genre);
-  }, []);
+  }, [genre]);
+
+  useEffect(() => {
+    //chama função getSearchMovies ao receber input de busca, caso contrário chama a getMovies (chamada ao ter o state atualizado)
+    if (searchMovie) {
+      getSearchMovies(searchMovie);
+    }
+
+    if (!searchMovie.trim()) {
+      getMoviesByGenre(genre);
+    }
+  }, [searchMovie]);
 
   return (
     <section className="movies__genres">
-      {movies.map((movie) => (
+      {
+      listSearchMovies.length == 0 ? listMovies.map((movie) => (
         <div className="movies__genres-card">
           <MovieCard movieProp={movie} />
         </div>
-      ))}
+      )) : listSearchMovies.map((movie) => (
+        <div key={movie.id}>
+            <MovieCard movieProp={movie}/>
+        </div>
+    ))
+      }
     </section>
   );
 };
