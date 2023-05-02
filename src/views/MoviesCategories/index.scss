@@ -1,12 +1,36 @@
 @use "../../sass/variables" as *;
 
-.movies__genres{
+.movies__genres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  column-gap: 4em;
+  row-gap: 2em;
+  padding: 3em;
+  background: $background-alternative;
+  width: 100%;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .movies__genres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 1em;
+    padding: 2em 0em;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .movies__genres {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
     column-gap: 4em;
     row-gap: 2em;
-    padding: 3em;
+    padding-block: 1em;
     background: $background-alternative;
-    width: 100%;
+  }
 }

@@ -1,37 +1,65 @@
 @use "../../sass/variables" as *;
 
+.card__genre {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
 
-.card__genre{
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    border-radius: 10px;
+  &-img {
+    width: 350px;
+    height: 400px;
+    transition: all 0.4s ease-in-out;
+    opacity: 0.7;
+  }
 
-    &-img{
-        width: 350px;
-        height: 400px;
-        transition: all 0.4s ease-in-out;
-        opacity: 0.7;
-    }
+  &-img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
 
-    &-img:hover{
-        transform: scale(1.1);
-        opacity: 1;
-    }
-
-    &-title{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #000;
-        font-size: 2em;
-        text-transform: uppercase;
-        font-family: $font-menu;
-        background-color: rgba($color: #fff, $alpha: 0.8);
-        padding: 0 0.5em;
-        border-radius: 5px;
-    }
+  &-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: $font-menu;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    padding: 0 0.5em;
+    border-radius: 5px;
+  }
 }
 
+/* TABLET */
+@media (max-width: 900px) {
+  .card__genre {
+
+    &-img {
+      width: 220px;
+      height: 300px;
+    }
+
+    &-title {
+      font-size: 1.5em;
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .card__genre {
+
+    &-img {
+        max-width: 250px;
+        height: 300px;
+    }
+
+    &-title {
+      font-size: 1em;
+    }
+  }
+}

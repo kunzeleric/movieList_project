@@ -19,7 +19,7 @@ const MovieSideBarMenu = () => {
     const pElements = Array.from(document.querySelectorAll('p'));
 
     if (!menuVisible) {
-      sideBar.classList.toggle('resize');
+      sideBar.style.width = '90px';
       
       pElements.map((item) => {
         item.classList.toggle('hidden');
@@ -27,7 +27,7 @@ const MovieSideBarMenu = () => {
 
       setMenuVisible(true);
     } else {
-      sideBar.classList.toggle('resize');
+      sideBar.style.width = '300px';
       pElements.map((item) => {
         item.classList.toggle('hidden');
   

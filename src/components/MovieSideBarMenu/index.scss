@@ -4,7 +4,10 @@
   padding-inline: 2em;
   position: sticky;
   box-shadow: 5px 13px 15px rgba(0, 0, 0, 0.7);
-  transition: all 1s ease;
+  transition: all 0.35s ease;
+  width: 300px;
+  background: $background;
+  
   &__nav {
     color: #fff;
     display: flex;
@@ -31,7 +34,7 @@
       }
 
       p {
-        font-size: 1.4em;
+        font-size: 1em;
       }
 
       &__item:hover {
@@ -48,7 +51,7 @@
   }
 
   .icon {
-    height: 35px;
+    height: 30px;
   }
 
   .iconMenu {
@@ -67,19 +70,17 @@
   .hidden {
     display: none;
   }
-
-  .resize {
-    width: 1%;
-  }
 }
 
 /* TABLETS */
 @media (max-width: 900px) {
   .sidebar {
-    width: 35%;
+    width: 90px;
 
     &__nav {
       &-list {
+        margin-top: 2em;
+
         &__item {
           &-wrapper {
             height: 6vw;
@@ -88,7 +89,7 @@
         }
 
         p {
-          font-size: 1.2em;
+          display: none;
         }
       }
     }
@@ -98,29 +99,25 @@
     }
 
     .iconMenu {
-      height: 40px;
-      top: 50px;
+      visibility: hidden;
     }
 
     .hidden {
       display: none;
     }
   }
-
-  .resize {
-    width: 10%;
-  }
 }
 
 /* MOBILE */
 @media (max-width: 480px) {
   .sidebar {
-    width: 22%;
 
     &__nav {
       padding-inline: 0.5em;
+      
       &-list {
         margin-top: 1em;
+
         &__item {
           &-wrapper {
             flex-direction: column;
@@ -135,10 +132,6 @@
         }
       }
     }
-    .icon {
-      height: 30px;
-    }
-
     .iconMenu {
       display: none;
     }

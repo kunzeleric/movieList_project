@@ -1,12 +1,23 @@
 @use "../../sass/variables" as *;
 
-.topRated{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
-    column-gap: 4em;
-    row-gap: 2em;
-    padding: 3em;
-    background: $background-alternative;
-    width: 100%;
+.topRated {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  column-gap: 4em;
+  row-gap: 2em;
+  padding: 3em;
+  background: $background-alternative;
+  width: 100%;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .topRated {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 0;
+  }
 }

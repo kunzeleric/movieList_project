@@ -1,13 +1,30 @@
 @use "../../sass/variables" as *;
 
+.genres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 4em;
+  row-gap: 2em;
+  padding: 3em;
+  width: 100%;
+}
 
-.genres{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
-    column-gap: 4em;
-    row-gap: 2em;
-    padding: 3em;
-    background: $background-alternative;
-    width: 100%;
+/* TABLET */
+@media (max-width: 900px) {
+  .genres {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em 0;
+    gap: 2em;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .genres {
+    padding: 2em 0;
+  }
 }
