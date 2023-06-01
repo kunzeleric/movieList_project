@@ -41,9 +41,7 @@ const Home = ({ searchMovie }) => {
       <section className="home">
         <div className="home__section">
           {movies.map((movie) => (
-            <div key={movie.id} className="home__card">
-              <MovieCard movieProp={movie} />
-            </div>
+              <MovieCard key={movie.id} movieProp={movie} />
           ))}
         </div>
       </section>

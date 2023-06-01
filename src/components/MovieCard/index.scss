@@ -60,6 +60,10 @@
       font-family: $font-menu;
       padding: 0 0.5em;
       text-justify: auto;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 15;
+      overflow: hidden;
     }
 
     &-button {
