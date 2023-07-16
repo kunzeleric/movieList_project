@@ -4,6 +4,8 @@
 A project developed to practice React and API consumption skills. 
 It was inspired in one of the projects developed in the Web Full Stack Course I was taking, but I decided to give a personal touch :)
 
+<a href="https://movie-list-deplayer.netlify.app/" target="_blank">Netlify link<a/>
+
 ## Technologies & Dependencies
 
 - ReactJS
